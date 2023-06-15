@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def bienvenido(request):
-  return HttpResponse('Bienvenidos a la pagina SAP')
+  return render(request, 'prueba.html')
 
 def despedirse(request):
   return HttpResponse('Chaito')
