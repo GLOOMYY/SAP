@@ -6,7 +6,8 @@ from personas.models import Persona
 
 def bienvenido(request):
   numPersonas = Persona.objects.count()
-  return render(request, 'prueba.html', {'numPersonas':numPersonas})
+  personas= Persona .objects.all()
+  return render(request, 'prueba.html', {'personas':personas, 'numPersonas':numPersonas})
 
 def contacto(request):
   return HttpResponse("Nombre: Sebastian Mesa \nTelefono: 3053438319 \nEmail: sebas.mesa.montoya@gmail.com")

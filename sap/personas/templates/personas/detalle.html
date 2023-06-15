@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle {{persona.nombre}}</title>
+</head>
+<body>
+  <h1>Detalle {{persona.nombre}}</h1>
+  <div>Id Persona: {{persona.id}}</div>
+  <div>Nombre: {{persona.nombre}}</div>
+  <div>Apellido: {{persona.apellido}}</div>
+  <div>Email Persona: {{persona.email}}</div>
+  
+  <a href="{% url 'index' %}">Regresar</a>
+
+</body>
+</html>

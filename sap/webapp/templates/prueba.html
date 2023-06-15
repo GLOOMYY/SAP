@@ -8,20 +8,24 @@
 </head>
 <body>
   <h1>Sistema de Administracion de Personas S.A.P.</h1>
-  <!-- <div>
-    {{msg1}}
-  </div>
-  <div>
-    {{msg2}}
-  </div>
-  <div>
-    {%for item in lista%}
-    <p>{{item}}</p>
-    {% endfor %}
-    {{dic}}
-  </div> -->
   <div>
     Numero de personas: {{numPersonas}}
+  </div>
+  <div>
+    <a href="nueva_persona/">Nueva Persona</a>
+  </div>
+  <div>
+    <ul>
+      {% for persona in personas %}
+      <li>
+        Persona {{persona.id}}: 
+        {{persona.nombre}} 
+        {{persona.apellido}} 
+        {{persona.email}}
+        <a href="detalle_persona/{{persona.id}}">Ver detalle</a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </body>
 </html>
