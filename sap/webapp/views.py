@@ -6,7 +6,8 @@ from personas.models import Persona
 
 def bienvenido(request):
   numPersonas = Persona.objects.count()
-  personas= Persona .objects.all()
+  #personas= Persona .objects.all()
+  personas = Persona.objects.order_by('id')
   return render(request, 'prueba.html', {'personas':personas, 'numPersonas':numPersonas})
 
 def contacto(request):

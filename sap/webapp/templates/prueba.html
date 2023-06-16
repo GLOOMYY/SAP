@@ -15,17 +15,31 @@
     <a href="nueva_persona/">Nueva Persona</a>
   </div>
   <div>
-    <ul>
-      {% for persona in personas %}
-      <li>
-        Persona {{persona.id}}: 
-        {{persona.nombre}} 
-        {{persona.apellido}} 
-        {{persona.email}}
-        <a href="detalle_persona/{{persona.id}}">Ver detalle</a>
-      </li>
-      {% endfor %}
-    </ul>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+            <th>Acciones</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for persona in personas %}
+            <tr>
+              <td>{{ persona.id }}</td>
+              <td>{{ persona.nombre }} {{ persona.apellidos }}</td>
+              <td>{{ persona.email }}</td>
+              <td><a href="detalle_persona/{{ persona.id }}">Ver</a></td>
+              <td><a href="editar_persona/{{ persona.id }}">Editar</a></td>
+              <td><a href="eliminar_persona/{{persona.id}}">Eliminar</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a href="domicilios/">Ir a gestion de domicilios</a>
   </div>
 </body>
 </html>

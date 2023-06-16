@@ -21,3 +21,5 @@ class Persona(models.Model):
   def __str__(self):
     return f'Persona {self.id}: {self.nombre} {self.apellido} {self.email}'
     
+
+
