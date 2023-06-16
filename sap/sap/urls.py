@@ -25,17 +25,16 @@ urlpatterns = [
     path('', bienvenido, name = 'index'),
     path('contacto/', contacto),
     
-    # Persona
+    # Personas
     path('detalle_persona/<int:id>', detallePersona),
     path('nueva_persona/',  formaPersona),
     path('editar_persona/<int:id>', editarPersona),
     path('eliminar_persona/<int:id>', eliminarPersona),
     
-    # Domicilio
-    #path('domicilios/',mostrarDomicilios)
-    #path('detalle_domicilio/<int:id>', detalleDomicilio),
-    #path('nuevo_domicilio/',  nuevoDomicilio),
-    #path('editar_domicilio/<int:id>', editarDomicilio),
-    #path('eliminar_domicilio/<int:id>', eliminarDomicilio),
-
+    # Domicilios
+    path('domicilios/', mostrarDomicilios),
+    path('detalle_domicilio/<int:id>', detalleDomicilio),
+    path('nuevo_domicilio/',  nuevoDomicilio),
+    path('editar_domicilio/<int:id>', editarDomicilio),
+    path('eliminar_domicilio/<int:id>', eliminarDomicilio),
 ]
